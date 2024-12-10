@@ -14,13 +14,17 @@ public class Paiement {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private double montantAccorde;
     private double montantPaye;
     private LocalDate dateSoin;
     private String situation;
+    private LocalDate datePaiement;
 
     @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "suivi_dossier_id")
     private SuiviDossier suiviDossier;
+
+    @ManyToOne()
+    @JoinColumn(name = "suivi_pec_id")
+    private SuiviPEC suiviPEC;
 
 }

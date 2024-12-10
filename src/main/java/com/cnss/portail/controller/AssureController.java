@@ -2,10 +2,7 @@ package com.cnss.portail.controller;
 
 import com.cnss.portail.model.Assure;
 import com.cnss.portail.service.AssureService;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,5 +22,10 @@ public class AssureController {
         System.out.println("test------------------");
         return assureService.getAllAssures();
 
+    }
+
+    @GetMapping("/find/{cin}")
+    public Assure getAssureByCin(@PathVariable("cin") String cin) {
+        return assureService.getAssureByCin(cin);
     }
 }

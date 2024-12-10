@@ -8,4 +8,5 @@ import java.util.List;
 
 public interface AssureRepository extends JpaRepository<Assure, Long> {
 
+    Assure findByCin(String cin);
 }

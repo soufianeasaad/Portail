@@ -19,5 +19,8 @@ public class AssureService {
         return assureRepository.findAll();
     }
 
+    public Assure getAssureByCin(String cin) {
+        return assureRepository.findByCin(cin);
+    }
 
 }

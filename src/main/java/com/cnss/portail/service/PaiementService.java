@@ -17,4 +17,10 @@ public class PaiementService {
     public List<Paiement> findAllPaiementsByMatricule(String matricule) {
         return paiementRepository.findAllBySuiviDossier_Assure_Matricule(matricule);
     }
+
+    public List<Paiement> findAllPaiementsByNumeroDos(String numeroDos) {
+        return paiementRepository.findAllBySuiviDossier_Numero(numeroDos);
+    }
+
+
 }

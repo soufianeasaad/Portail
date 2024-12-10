@@ -9,4 +9,6 @@ import java.util.List;
 
 public interface PaiementRepository extends JpaRepository<Paiement, Long> {
     List<Paiement> findAllBySuiviDossier_Assure_Matricule(String matricule);
+
+    List<Paiement> findAllBySuiviDossier_Numero(String numerDos);
 }

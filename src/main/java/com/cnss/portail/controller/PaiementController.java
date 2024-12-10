@@ -20,4 +20,9 @@ public class PaiementController {
     public List<Paiement> getAllPaiementByMatricule(@PathVariable("matricule") String matricule){
         return paiementService.findAllPaiementsByMatricule(matricule);
     }
+
+    @GetMapping("/all/numDos/{numDos}")
+    public List<Paiement> getAllPaiementByNumDos(@PathVariable("numDos") String numDos){
+        return paiementService.findAllPaiementsByNumeroDos(numDos);
+    }
 }

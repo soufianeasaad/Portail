@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -28,4 +29,7 @@ public class SuiviPEC {
     @JoinColumn(name = "assure_id")
     private Assure assure;
 
+    @OneToMany(mappedBy = "suiviPEC")
+    @JsonIgnore
+    private List<Paiement> paiements;
 }
