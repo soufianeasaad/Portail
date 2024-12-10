@@ -7,4 +7,8 @@ import java.util.List;
 
 public interface SuiviPECRepository extends JpaRepository<SuiviPEC, Long> {
     List<SuiviPEC> findAllByAssure_Matricule(String matricule);
+
+    SuiviPEC findByNumeroPEC(String pec);
+
+
 }

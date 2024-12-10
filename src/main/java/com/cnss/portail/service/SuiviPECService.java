@@ -20,4 +20,9 @@ public class SuiviPECService {
         return listPEC;
     }
 
+    public SuiviPEC finBySuiviPec(String pec) {
+        return suiviPECRepository.findByNumeroPEC(pec);
+    }
+
+
 }

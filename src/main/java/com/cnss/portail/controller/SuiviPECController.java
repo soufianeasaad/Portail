@@ -21,4 +21,11 @@ public class SuiviPECController {
         List<SuiviPEC> list = suiviPECService.findSuiviPECByMatricule(matricule);
         return list;
     }
+
+    @GetMapping("/find/{numeroPec}")
+    public SuiviPEC getByNumeroPec(@PathVariable("numeroPec") String pec) {
+        return suiviPECService.finBySuiviPec(pec);
+    }
+
+
 }
