@@ -3,6 +3,7 @@ package com.cnss.portail.controller;
 import com.cnss.portail.model.Admin;
 import com.cnss.portail.repository.AdminRepository;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -55,7 +56,7 @@ public class AuthController {
     }
 
     // Classe interne pour la réponse
-    @AllArgsConstructor
+
     public static class AdminResponse {
         private Long id;
         private String email;
@@ -65,10 +66,17 @@ public class AuthController {
         private String ville;
         private String adresse;
 
-        public AdminResponse(Long id, String email) {
+        public AdminResponse(Long id, String email, String nom, String inpe, String telephone, String ville, String adresse) {
             this.id = id;
             this.email = email;
+            this.nom = nom;
+            this.inpe = inpe;
+            this.telephone = telephone;
+            this.ville = ville;
+            this.adresse = adresse;
+
         }
+
 
         public Long getId() {
             return id;

@@ -6,7 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @AllArgsConstructor @NoArgsConstructor
-@Data @Entity
+@Entity
 public class Admin {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,4 +23,36 @@ public class Admin {
     private String telephone;
     private String ville;
     private String adresse;
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public String getInpe() {
+        return inpe;
+    }
+
+    public String getTelephone() {
+        return telephone;
+    }
+
+    public String getVille() {
+        return ville;
+    }
+
+    public String getAdresse() {
+        return adresse;
+    }
 }
